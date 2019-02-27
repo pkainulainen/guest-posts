@@ -85,6 +85,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Provides support for starting WebDriver containers. -->
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>selenium</artifactId>
+            <version>${testcontainers.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- We need this dependency because our tests use Chrome -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -101,14 +109,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
             <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Provides support for starting WebDriver containers. -->
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>selenium</artifactId>
-            <version>${testcontainers.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
