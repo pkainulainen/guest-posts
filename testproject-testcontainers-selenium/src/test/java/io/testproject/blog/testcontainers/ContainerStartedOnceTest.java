@@ -20,8 +20,7 @@ class ContainerStartedOnceTest {
 
     @Container
     private static final BrowserWebDriverContainer BROWSER_CONTAINER = new BrowserWebDriverContainer()
-            .withCapabilities(new ChromeOptions())
-            .withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.RECORD_FAILING, new File("./target/"));
+            .withCapabilities(new ChromeOptions());
 
     private static WebDriver browser;
 

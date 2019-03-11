@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testcontainers.containers.BrowserWebDriverContainer;
+import org.testcontainers.containers.Network;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
@@ -19,8 +20,7 @@ class ContainerStartedBeforeEachTestMethodTest {
 
     @Container
     private final BrowserWebDriverContainer BROWSER_CONTAINER = new BrowserWebDriverContainer()
-            .withCapabilities(new ChromeOptions())
-            .withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.RECORD_FAILING, new File("./target/"));
+            .withCapabilities(new ChromeOptions());
 
     private WebDriver browser;
 
