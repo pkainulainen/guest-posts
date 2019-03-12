@@ -93,6 +93,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Allows us to compile tests which use Selenium WebDriver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- We need this dependency because our tests use Chrome -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

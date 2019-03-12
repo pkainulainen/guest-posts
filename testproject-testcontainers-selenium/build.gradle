@@ -24,8 +24,11 @@ dependencies {
             //Provides support for starting WebDriver containers.
             'org.testcontainers:selenium:1.10.6',
 
+            //Allows us to compile tests which use Selenium WebDriver
+            'org.seleniumhq.selenium:selenium-api:3.141.59',
+
             //We need this dependency because our tests use Chrome.
-            'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59',
+            'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
     )
     testRuntime(
             //TestContainers uses SFL4J for logging. If we need to
