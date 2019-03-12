@@ -7,20 +7,9 @@ repositories {
 }
 
 dependencies {
-    testCompile(
+    testImplementation(
             //Provides the JUnit 5 API which we use when we write tests.
             'org.junit.jupiter:junit-jupiter-api:5.4.0',
-    )
-    testImplementation(
-            //TestContainers uses SFL4J for logging. If we need to
-            //investigate its logs, we must add an SLF4J binding
-            //to the classpath. This example uses the binding provided
-            //by Log4J 2.
-            'org.apache.logging.log4j:log4j-core:2.11.2',
-            'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2',
-
-            //Provides support for running tests which use JUnit 5.
-            'org.junit.jupiter:junit-jupiter-engine:5.4.0',
 
             //This dependency isn't required but I like to use AssertJ
             //for writing assertions.
@@ -37,6 +26,17 @@ dependencies {
 
             //We need this dependency because our tests use Chrome.
             'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59',
+    )
+    testRuntime(
+            //TestContainers uses SFL4J for logging. If we need to
+            //investigate its logs, we must add an SLF4J binding
+            //to the classpath. This example uses the binding provided
+            //by Log4J 2.
+            'org.apache.logging.log4j:log4j-core:2.11.2',
+            'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2',
+
+            //Provides support for running tests which use JUnit 5.
+            'org.junit.jupiter:junit-jupiter-engine:5.4.0',
 
             //We need a remote WebDriver because the browser runs in a
             //Docker container.
